@@ -14,31 +14,47 @@ function outputResult(result){
 }
 
 function addNums(){
+    if(runningTotal!==0){
+        total();
+    }
     operation='add';
     runningTotal+=userInput;
     userInput=0;
     outputResult(runningTotal);
+    console.log('runningTotal: '+runningTotal);
 }
 
 function subNums(){
+    if(runningTotal!==0){
+        total();
+    }
     operation='sub';
     runningTotal+=userInput;
     userInput=0;
     outputResult(runningTotal);
+    console.log('runningTotal: '+runningTotal);
 }
 
 function multNums(){
+    if(runningTotal!==0){
+        total();
+    }
     operation='mult';
     runningTotal+=userInput;
     userInput=0;
     outputResult(runningTotal); 
+    console.log('runningTotal: '+runningTotal);
 }
 
 function divNums(){
+    if(runningTotal!==0){
+        total();
+    }
     operation='div';
     runningTotal+=userInput;
     userInput=0;
     outputResult(runningTotal); 
+    console.log('runningTotal: '+runningTotal);
 }
 
 function total(){
@@ -63,6 +79,7 @@ function total(){
 function reset(){
     runningTotal=0;
     userInput=0;
+    operation='';
     outputResult(runningTotal);
 }
 
