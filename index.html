@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel='stylesheet' href='index.css'>
+<script src=index.js defer></script>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Calculator app</title>
+  <title>Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,12 +17,31 @@
   </style>
 </head>
 <body>
-
-
+  <div class='output'>
+    <h1 id='output'></h1>
+  </div>
+  <div class='btn-group'>
+    <button class='btn' onclick=currentNum(0)>0</button>
+    <button class='btn' onclick=currentNum(1)>1</button>
+    <button class='btn' onclick=currentNum(2)>2</button>
+    <button class='btn' onclick=currentNum(3)>3</button>
+    <button class='btn' onclick=currentNum(4)>4</button>
+    <button class='btn' onclick=currentNum(5)>5</button>
+    <button class='btn' onclick=currentNum(6)>6</button>
+    <button class='btn' onclick=currentNum(7)>7</button>
+    <button class='btn' onclick=currentNum(8)>8</button>
+    <button class='btn' onclick=currentNum(9)>9</button>
+    <button class='btn' onclick=addNums()>+</button>
+    <button class='btn' onclick=subNums()>-</button>
+    <button class='btn' onclick=multNums()>x</button>
+    <button class='btn' onclick=divNums()>/</button>
+    <button class='btn' onclick=total()>=</button>
+    <button class='btn' onclick=reset()>clear</button>
+  </div>
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">FEM</a>. 
+    Coded by <a href="#">BC</a>.
   </div>
 </body>
 </html>
