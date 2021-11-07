@@ -1,11 +1,11 @@
 document.getElementById('output').textContent=0;
 
-let userInput=0;
+let userInput='';
 let runningTotal=0;
-let operation='';
+let operation=''; //necessary variable because 'total' function wouldn't know which case to use when equal button is selected
 
 function currentNum(digit){
-    userInput=userInput*10+digit;
+    userInput=userInput+digit;
     outputResult(userInput);
 }
 
@@ -18,10 +18,9 @@ function addNums(){
         total();
     }
     operation='add';
-    runningTotal+=userInput;
-    userInput=0;
+    runningTotal+=Number(userInput);
+    userInput='';
     outputResult(runningTotal);
-    console.log('runningTotal: '+runningTotal);
 }
 
 function subNums(){
@@ -29,10 +28,9 @@ function subNums(){
         total();
     }
     operation='sub';
-    runningTotal+=userInput;
-    userInput=0;
+    runningTotal+=Number(userInput);
+    userInput='';
     outputResult(runningTotal);
-    console.log('runningTotal: '+runningTotal);
 }
 
 function multNums(){
@@ -40,10 +38,9 @@ function multNums(){
         total();
     }
     operation='mult';
-    runningTotal+=userInput;
-    userInput=0;
+    runningTotal+=Number(userInput);
+    userInput='';
     outputResult(runningTotal); 
-    console.log('runningTotal: '+runningTotal);
 }
 
 function divNums(){
@@ -51,25 +48,24 @@ function divNums(){
         total();
     }
     operation='div';
-    runningTotal+=userInput;
-    userInput=0;
+    runningTotal+=Number(userInput);
+    userInput='';
     outputResult(runningTotal); 
-    console.log('runningTotal: '+runningTotal);
 }
 
 function total(){
     switch(operation!==''){
         case operation==='add':
-            runningTotal+=userInput;
+            runningTotal+=Number(userInput);
             break;
         case operation==='sub':
-            runningTotal-=userInput;
+            runningTotal-=Number(userInput);
             break;
         case operation==='mult':
-            runningTotal*=userInput;
+            runningTotal*=Number(userInput);
             break;
         case operation==='div':
-            runningTotal/=userInput;
+            runningTotal/=Number(userInput);
             break;
     }
     userInput=0;
@@ -78,7 +74,7 @@ function total(){
 
 function reset(){
     runningTotal=0;
-    userInput=0;
+    userInput='';
     operation='';
     outputResult(runningTotal);
 }
