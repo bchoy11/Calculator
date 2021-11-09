@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Calculator app</title>
-
+  <h1 class='title'>calc</h1>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -25,7 +25,7 @@
         <button class='btn' onclick="currentNum('7')">7</button>
         <button class='btn' onclick="currentNum('8')">8</button>
         <button class='btn' onclick="currentNum('9')">9</button>
-        <button class='btn'>DEL</button>
+        <button class='btn offset-key'>DEL</button>
         <button class='btn' onclick="currentNum('4')">4</button>
         <button class='btn' onclick="currentNum('5')">5</button>
         <button class='btn' onclick="currentNum('6')">6</button>
@@ -38,14 +38,15 @@
         <button class='btn' onclick="currentNum('0')">0</button>
         <button class='btn' onclick=divNums()>/</button>
         <button class='btn' onclick=multNums()>x</button>
-        <button class='btn' onclick=reset()>clear</button>
-        <button class='btn' onclick=total()>=</button>
+
+        <button class='btn clear offset-key' onclick=reset()>RESET</button>
+        <button class='btn equal' onclick=total()>=</button>
       </div>
     </div>
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">FEM</a>. 
-    Coded by <a href="#">BC</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">FEM</a>
+    Coded by <a href="#">BC</a>
   </div>
 </body>
 </html>
