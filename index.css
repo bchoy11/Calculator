@@ -49,9 +49,10 @@
 }
 
 .toggle input{
+    cursor: pointer;
     opacity: 0;
-    width: 0;
-    height: 0;
+    z-index: 3;
+    background:hsl(6, 63%, 50%);
 }
 
 .slider{
@@ -63,6 +64,15 @@
     bottom: .25rem;
     background-color: hsl(6, 63%, 50%);
     border-radius: 2rem;
+    transition: 0.3s ease-out;
+}
+
+.toggle input[value='2']:checked ~.slider{
+    left: 37%;
+}
+
+.toggle input[value='3']:checked ~.slider{
+    left: 67%;
 }
 
 body{
@@ -137,4 +147,10 @@ body{
     box-shadow: 0 3px hsl(224, 28%, 35%);
     color: hsl(30, 25%, 89%);
     font-size: 1rem;
+}
+
+.body{
+    background: #95A5A6;
+    background-color: #27ae60;
+    border: solid #e74c3c;
 }
