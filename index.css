@@ -1,8 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 
+/* themes */
+.first-theme{
+--mainbg: hsl(222, 26%, 31%);
+--keypadbg: hsl(223, 31%, 20%);
+--screenbg: hsl(224, 36%, 15%);
+
+--keybg-one: hsl(225, 21%, 49%);
+--keyshadow-one: hsl(224, 28%, 35%);
+--keybg-two: hsl(6, 63%, 50%);
+--keyshadow-two: hsl(6, 70%, 34%);
+--keybg-three: hsl(30, 25%, 89%);
+--keyshadow-three: hsl(28, 16%, 65%);
+
+--text-dark: hsl(221, 14%, 31%);
+--text-light: hsl(0, 0, 100%);
+--main-font: white;
+
+}
+
+.second-theme{
+--mainbg: hsl(0, 0%, 90%);
+--keypadbg: hsl(0, 5%, 81%);
+--screenbg: hsl(0, 0%, 93%);
+
+--keybg-one: hsl(185, 42%, 37%);
+--keyshadow-one: hsl(185, 58%, 25%);
+--keybg-two: hsl(25, 98%, 40%);
+--keyshadow-two: hsl(25, 99%, 27%);
+--keybg-three: hsl(45, 7%, 89%);
+--keyshadow-three: hsl(35, 11%, 61%);
+
+--text-dark: hsl(60, 10%, 19%);
+--text-light: hsl(0, 0, 100%);
+--main-font: black;
+
+}
+
+/* end of themes */
+
 *{
     font-family: 'Spartan';
-    color: white;
+    color: var(--main-font);
 }
 
 .header{
@@ -43,7 +82,7 @@
     display: flex;
     align-items: center;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
-    background: hsl(223, 31%, 20%);
+    background: var(--keypadbg);
     width: 4rem;
     height: 1.5rem;
 }
@@ -52,7 +91,7 @@
     cursor: pointer;
     opacity: 0;
     z-index: 3;
-    background:hsl(6, 63%, 50%);
+    background:var(--keybg-two);
 }
 
 .slider{
@@ -62,7 +101,7 @@
     width: 1rem;
     left: .25rem;
     bottom: .25rem;
-    background-color: hsl(6, 63%, 50%);
+    background-color: var(--keybg-two);
     border-radius: 2rem;
     transition: 0.3s ease-out;
 }
@@ -76,7 +115,7 @@
 }
 
 body{
-    background: hsl(222, 26%, 31%);
+    background: var(--mainbg);
     color: white;
     display: flex;
     flex-direction: column;
@@ -87,7 +126,7 @@ body{
 }
 
 .output{
-    background: hsl(224, 36%, 15%);
+    background: var(--screenbg);
     width: 100%;
     border-radius: 5px;
     padding: .75rem 0 .75rem 0;
@@ -104,13 +143,13 @@ body{
 }
 
 .keypad{
-    background: hsl(223, 31%, 20%);
+    background: var(--keypadbg);
     width: 100%;
     border-radius: 5px;
 }
 
 .btn-group{
-    background: hsl(223, 31%, 20%);
+    background: var(--keypadbg);
     padding: 1.5rem;
     height: 300px;
     border-radius: 10px;
@@ -122,12 +161,12 @@ body{
 
 .btn{
     font-size: 2rem;
-    background: hsl(30, 25%, 89%);
+    background: var(--keybg-three);
     padding: 0;
     border: none;
     border-radius: 3px;
     height: 3rem;
-    box-shadow: 0 3px hsl(28, 16%, 65%);
+    box-shadow: 0 3px var(--keyshadow-three);
     color: black;
 }
 
@@ -137,20 +176,14 @@ body{
 
 .equal{
     grid-column: 3/5;
-    background: hsl(6, 63%, 50%);
-    color: hsl(30, 25%, 89%);
-    box-shadow: 0 3px hsl(6, 70%, 34%);
+    background: var(--keybg-two);
+    color: var(--keybg-three);
+    box-shadow: 0 3px var(--keyshadow-two);
 }
 
 .offset-key{
-    background: hsl(225, 21%, 49%);
-    box-shadow: 0 3px hsl(224, 28%, 35%);
-    color: hsl(30, 25%, 89%);
+    background: var(--keybg-one);
+    box-shadow: 0 3px var(--keyshadow-one);
+    color: var(--keybg-three);
     font-size: 1rem;
-}
-
-.body{
-    background: #95A5A6;
-    background-color: #27ae60;
-    border: solid #e74c3c;
 }
