@@ -4,6 +4,39 @@ let userInput='';
 let runningTotal=0;
 let operation=''; //necessary variable because 'total' function wouldn't know which case to use when equal button is selected
 
+window.onload=function(){
+    let currentTheme = '1';
+    const selectTheme=document.getElementById('select-theme');
+
+    selectTheme.addEventListener('change',function(){
+       console.log('current: '+currentTheme);
+       const newTheme = valToTheme(document.querySelector("input[name='theme']:checked").value); 
+       
+       setTheme(currentTheme, newTheme);
+       console.log('new: '+newTheme);
+    });
+
+    function setTheme(oldTheme, newTheme){
+        const body = document.getElementsByTagName('body')[0];
+        body.classList.remove(oldTheme);
+        body.classList.add(newTheme);
+        currentTheme = newTheme;
+    }
+
+    function valToTheme(value){
+        if(value==='1'){
+            return 'first-theme';
+        }
+        if(value==='2'){
+            return 'second-theme';
+        }
+        else{
+            return 'third-theme';
+        }
+    }
+
+}
+
 function currentNum(digit){
     userInput=userInput+digit;
     outputResult(userInput);
