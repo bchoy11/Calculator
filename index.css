@@ -144,6 +144,7 @@ body{
     justify-content: center;
     margin: 2rem 2rem 0 2rem;
     gap: 2rem;
+    max-width: 620px;
 }
 
 .output{
@@ -207,4 +208,11 @@ body{
     box-shadow: 0 3px var(--keyshadow-one);
     color: var(--offset-font);
     font-size: 1rem;
+}
+
+@media(min-width:684px){
+    body{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
