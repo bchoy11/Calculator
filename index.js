@@ -39,11 +39,20 @@ window.onload=function(){
 
 function currentNum(digit){
     userInput=userInput+digit;
+    console.log(typeof(userInput));
     outputResult(userInput);
 }
 
 function outputResult(result){
     document.getElementById('output').textContent=result;
+}
+
+function deleteNum(){
+    digit=userInput[userInput.length-1];
+    userInput=String((userInput-digit)/10);
+    console.log(userInput);
+    console.log(typeof(userInput));
+    outputResult(userInput);
 }
 
 function addNums(){
